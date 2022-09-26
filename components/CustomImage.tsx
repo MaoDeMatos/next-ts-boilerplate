@@ -9,7 +9,12 @@ type CustomImageProps = ImageProps & {
 const Wrapper = tw.span`relative`;
 
 /**
- * Next/image wrapper
+ * Wrapper that provides default values for the "next/image" component.
+ *
+ * Use "wrapperProps" to change the image's parent props.
+ *
+ * @example
+ * <CustomImage wrapperProps={{ css: { ...tw`your-classes` } }} {...otherProps} />
  */
 export const CustomImage = ({
   wrapperProps,
