@@ -6,6 +6,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 - NodeJS >= 16
 
+> ❗ You **MUST NOT** create a `src` folder, or it will break `stitches.config.ts` import
+
 ## Getting Started
 
 ### `yarn dev`

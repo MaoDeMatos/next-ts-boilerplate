@@ -13,7 +13,7 @@ const customStyles = {
     ...tw`antialiased bg-base-100 text-base-content`,
   },
   "::selection": {
-    ...tw`bg-accent text-base-100`,
+    ...tw`bg-secondary text-secondary-content`,
   },
 };
 

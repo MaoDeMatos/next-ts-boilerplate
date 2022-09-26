@@ -5,7 +5,7 @@
   "useTabs": false,
   "trailingComma": "es5",
   "semi": true,
-  "importOrder": ["^src/", "^[./]"],
+  "importOrder": ["^@/", "^[./]"],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true
 }
