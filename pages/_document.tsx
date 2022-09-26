@@ -26,7 +26,7 @@ export default class Document extends NextDocument {
 
   render() {
     return (
-      <Html lang="en" data-theme>
+      <Html lang="en">
         <Head />
         <body>
           <Main />

@@ -1,16 +1,11 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
-import "twin.macro";
+import tw from "twin.macro";
 
-type HomeCardType = {
-  title: string;
-  url: string;
-  content: string;
-};
+import { CustomImage } from "@/components/CustomImage";
 
 const Home: NextPage = () => {
-  const cards: HomeCardType[] = [
+  const cards = [
     {
       title: "Documentation →",
       url: "https://nextjs.org/docs",
@@ -42,7 +37,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main tw="min-h-screen px-16 flex flex-col flex-1 justify-center items-center gap-8">
+      <main tw="min-h-screen py-8 px-16 flex flex-col flex-1 justify-center items-center gap-8">
         <h1 tw="text-6xl font-bold text-center">
           Welcome to{" "}
           <a href="https://nextjs.org" tw="text-blue-500 hocus:underline">
@@ -85,14 +80,13 @@ const Home: NextPage = () => {
             tw="flex justify-center items-center grow"
           >
             Powered by{" "}
-            <span tw="relative h-4 w-20 ml-2 dark:(invert)">
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                layout="fill"
-                objectFit="contain"
-              />
-            </span>
+            <CustomImage
+              src={"/vercel.svg"}
+              alt="Vercel Logo"
+              wrapperProps={{
+                css: { ...tw`relative h-4 w-20 ml-2 dark:(invert)` },
+              }}
+            />
           </a>
         </div>
       </footer>
