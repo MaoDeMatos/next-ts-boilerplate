@@ -10,7 +10,7 @@ const customStyles = {
   },
   body: {
     WebKitTapHighlightColor: theme`colors.gray.300`,
-    ...tw`antialiased bg-base-100 text-base-content`,
+    ...tw`antialiased bg-base-100 text-base-content transition-colors`,
   },
   "::selection": {
     ...tw`bg-secondary text-secondary-content`,
