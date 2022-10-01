@@ -1,38 +1,25 @@
 import Image, { ImageProps } from "next/image";
-import { HTMLAttributes } from "react";
 import tw from "twin.macro";
 
-type CustomImageProps = ImageProps & {
-  wrapperProps?: HTMLAttributes<HTMLSpanElement>;
-};
-
-const Wrapper = tw.span`relative`;
+export const ImageWrapper = tw.span`relative`;
 
 /**
- * Wrapper that provides default values for the "next/image" component.
- *
- * Use "wrapperProps" to change the image's parent props.
- *
- * @example
- * <CustomImage wrapperProps={{ css: { ...tw`your-classes` } }} {...otherProps} />
+ * Provides default values for the `next/image` component.
  */
 export const CustomImage = ({
-  wrapperProps,
   src = "#",
   alt = "",
   layout = "fill",
   objectFit = "contain",
   ...props
-}: CustomImageProps) => {
+}: ImageProps) => {
   return (
-    <Wrapper {...wrapperProps}>
-      <Image
-        src={src}
-        alt={alt}
-        layout={layout}
-        objectFit={objectFit}
-        {...props}
-      />
-    </Wrapper>
+    <Image
+      src={src}
+      alt={alt}
+      layout={layout}
+      objectFit={objectFit}
+      {...props}
+    />
   );
 };
