@@ -1,0 +1,16 @@
+{
+  "global": {
+    "welcome": "Bienvenue sur"
+  },
+  "language": {
+    "current": "FR",
+    "switchTo-en": "Passer au site anglais",
+    "switchTo-fr": "Passer au site français"
+  },
+  "themes": {
+    "activate": {
+      "default": "Activer le thème de couleur \"système\" (par défaut)",
+      "withName": "Activer le thème de couleur \"{{name}}\""
+    }
+  }
+}

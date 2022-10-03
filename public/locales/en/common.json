@@ -1,0 +1,16 @@
+{
+  "global": {
+    "welcome": "Welcome to"
+  },
+  "language": {
+    "current": "EN",
+    "switchTo-en": "Switch to the English website",
+    "switchTo-fr": "Switch to the French website"
+  },
+  "themes": {
+    "activate": {
+      "default": "Activate \"system\" (default) color theme",
+      "withName": "Activate \"{{name}}\" color theme"
+    }
+  }
+}
