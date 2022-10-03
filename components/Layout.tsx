@@ -12,6 +12,7 @@ function Footer() {
       <div tw="flex justify-center items-center grow">
         Powered by
         <a href="https://vercel.com" target="_blank" rel="noopener noreferrer">
+          <span tw="sr-only">Logo Vercel</span>
           <VercelLogo tw="h-5 w-20 ml-2" />
         </a>
       </div>
