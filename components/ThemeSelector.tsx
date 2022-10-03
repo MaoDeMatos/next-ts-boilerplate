@@ -8,6 +8,8 @@ import {
   useCurrentTheme,
 } from "@/helpers/hooks/useCurrentTheme";
 
+import { ResponsiveFixedContainer } from "./Page";
+
 const ThemeButton = styled("button", {
   ...tw`h-6 w-6 rounded-full border border-base-content transition-all`,
   ...tw`ring-0 ring-transparent ring-offset-4 ring-offset-base-100`,
@@ -49,7 +51,7 @@ export function ThemeSelector() {
   );
 
   return (
-    <div tw="fixed left-10 bottom-12 flex gap-6">
+    <ResponsiveFixedContainer tw="left-10 bottom-12">
       <ThemeButton
         type="button"
         title={t("themes.activate.default")}
@@ -70,6 +72,6 @@ export function ThemeSelector() {
           onClick={() => changeTheme(theme)}
         />
       ))}
-    </div>
+    </ResponsiveFixedContainer>
   );
 }

@@ -3,7 +3,9 @@
     "welcome": "Bienvenue sur"
   },
   "language": {
-    "current": "FR"
+    "current": "FR",
+    "switchTo-en": "Passer au site anglais",
+    "switchTo-fr": "Passer au site français"
   },
   "themes": {
     "activate": {

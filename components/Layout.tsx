@@ -1,8 +1,9 @@
 import "twin.macro";
 
-import { ThemeSelector } from "@/components/ThemeSelector";
 import { HasChildren } from "@/types/GeneralTypes";
 
+import { LanguageSelector } from "./LanguageSelector";
+import { ThemeSelector } from "./ThemeSelector";
 import VercelLogo from "./VercelLogo";
 
 function Footer() {
@@ -22,6 +23,7 @@ export default function Layout({ children }: HasChildren) {
   return (
     <div tw="container flex flex-col ">
       <ThemeSelector />
+      <LanguageSelector />
 
       <main tw="py-8 px-16 flex-1">{children}</main>
 

@@ -3,7 +3,9 @@
     "welcome": "Welcome to"
   },
   "language": {
-    "current": "EN"
+    "current": "EN",
+    "switchTo-en": "Switch to the English website",
+    "switchTo-fr": "Switch to the French website"
   },
   "themes": {
     "activate": {
