@@ -1,0 +1,14 @@
+{
+  "global": {
+    "welcome": "Welcome to"
+  },
+  "language": {
+    "current": "EN"
+  },
+  "themes": {
+    "activate": {
+      "default": "Activate \"system\" (default) color theme",
+      "withName": "Activate \"{{name}}\" color theme"
+    }
+  }
+}

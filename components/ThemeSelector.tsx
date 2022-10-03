@@ -1,3 +1,4 @@
+import { useTranslation } from "next-i18next";
 import { useEffect } from "react";
 import tw, { styled } from "twin.macro";
 
@@ -29,8 +30,9 @@ export function ThemeSelector() {
   const { currentTheme } = useCurrentTheme();
   const changeTheme = useChangeTheme();
 
+  const { t } = useTranslation("common");
+
   const setSystemTheme = (e?: MediaQueryListEvent) => {
-    e?.preventDefault();
     if (currentTheme === "system") changeTheme("system");
   };
 
@@ -50,7 +52,7 @@ export function ThemeSelector() {
     <div tw="fixed left-10 bottom-12 flex gap-6">
       <ThemeButton
         type="button"
-        title="Activate system (default) color theme"
+        title={t("themes.activate.default")}
         className={currentTheme === "system" ? "active" : ""}
         theme={"system"}
         onClick={() => changeTheme("system")}
@@ -61,7 +63,7 @@ export function ThemeSelector() {
       {themes.map((theme) => (
         <ThemeButton
           type="button"
-          title={`Activate ${theme} color theme`}
+          title={t("themes.activate.withName", { name: theme })}
           className={theme === currentTheme ? "active" : ""}
           key={theme}
           theme={theme}

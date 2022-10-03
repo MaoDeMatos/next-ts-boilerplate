@@ -1,7 +1,14 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
+import { useTranslation } from "next-i18next";
 import "twin.macro";
 
 import { Page, PageTitle } from "@/components/Page";
+
+import { makeStaticTranslationProps } from "../helpers";
+
+export const getStaticProps: GetStaticProps = makeStaticTranslationProps([
+  "common",
+]);
 
 const Home: NextPage = () => {
   const cards = [
@@ -28,10 +35,12 @@ const Home: NextPage = () => {
     },
   ];
 
+  const { t } = useTranslation();
+
   return (
     <Page>
       <PageTitle>
-        Welcome to{" "}
+        {`${t("language.current")} - ${t("global.welcome")} `}
         <a
           href="https://nextjs.org"
           tw="transition-all text-secondary hocus:underline"

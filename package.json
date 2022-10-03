@@ -18,10 +18,12 @@
   "dependencies": {
     "@stitches/react": "^1.2.8",
     "daisyui": "^2.31.0",
+    "i18next": "^21.9.2",
     "next": "12.3.1",
     "next-i18next": "^12.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-i18next": "^11.18.6",
     "zustand": "^4.1.1"
   },
   "devDependencies": {
