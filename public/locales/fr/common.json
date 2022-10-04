@@ -4,12 +4,18 @@
   },
   "language": {
     "current": "FR",
-    "switchTo-en": "Passer au site anglais",
-    "switchTo-fr": "Passer au site français"
+    "en": {
+      "switch": "Passer au site en anglais",
+      "flagAlt": "Drapeau Anglais"
+    },
+    "fr": {
+      "switch": "Passer au site en français",
+      "flagAlt": "Drapeau Français"
+    }
   },
   "themes": {
     "activate": {
-      "default": "Activer le thème de couleur \"système\" (par défaut)",
+      "default": "Activer le thème de couleur système (par défaut)",
       "withName": "Activer le thème de couleur \"{{name}}\""
     }
   }
