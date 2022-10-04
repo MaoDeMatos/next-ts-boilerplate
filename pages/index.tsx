@@ -11,36 +11,35 @@ export const getStaticProps: GetStaticProps = makeStaticTranslationProps([
 ]);
 
 const Home: NextPage = () => {
-  const cards = [
-    {
-      title: "Documentation →",
-      url: "https://nextjs.org/docs",
-      content: "Find in-depth information about Next.js features and API.",
-    },
-    {
-      title: "Learn →",
-      url: "https://nextjs.org/learn",
-      content: "Learn about Next.js in an interactive course with quizzes!",
-    },
-    {
-      title: "Examples →",
-      url: "https://github.com/vercel/next.js/tree/canary/examples",
-      content: "Discover and deploy boilerplate example Next.js projects.",
-    },
-    {
-      title: "Deploy →",
-      url: "https://vercel.com/new",
-      content:
-        "Instantly deploy your Next.js site to a public URL with Vercel.",
-    },
-  ];
-
   const { t } = useTranslation();
+  // const cards = [
+  //   {
+  //     title: "Documentation →",
+  //     url: "https://nextjs.org/docs",
+  //     content: "Find in-depth information about Next.js features and API.",
+  //   },
+  //   {
+  //     title: "Learn →",
+  //     url: "https://nextjs.org/learn",
+  //     content: "Learn about Next.js in an interactive course with quizzes!",
+  //   },
+  //   {
+  //     title: "Examples →",
+  //     url: "https://github.com/vercel/next.js/tree/canary/examples",
+  //     content: "Discover and deploy boilerplate example Next.js projects.",
+  //   },
+  //   {
+  //     title: "Deploy →",
+  //     url: "https://vercel.com/new",
+  //     content:
+  //       "Instantly deploy your Next.js site to a public URL with Vercel.",
+  //   },
+  // ];
 
   return (
     <Page>
       <PageTitle>
-        {`${t("language.current")} - ${t("global.welcome")} `}
+        {`${t("global.welcome")} `}
         <a
           href="https://nextjs.org"
           tw="transition-all text-secondary hocus:underline"
@@ -59,7 +58,7 @@ const Home: NextPage = () => {
         </pre>
       </div>
 
-      <div tw="flex flex-col w-full sm:(w-auto flex-row) items-center justify-center flex-wrap max-w-3xl">
+      {/* <div tw="flex flex-col w-full sm:(w-auto flex-row) items-center justify-center flex-wrap max-w-3xl">
         {cards.map((element, idx) => (
           <a
             key={idx}
@@ -70,7 +69,7 @@ const Home: NextPage = () => {
             <p tw="text-xl">{element.content}</p>
           </a>
         ))}
-      </div>
+      </div> */}
     </Page>
   );
 };
