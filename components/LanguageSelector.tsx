@@ -24,7 +24,7 @@ export const LanguageSelector = () => {
   const { t, i18n } = useTranslation();
 
   return (
-    <ResponsiveFixedContainer tw="right-10 bottom-12">
+    <ResponsiveFixedContainer tw="right-8 bottom-8">
       {languagesList.map(({ lang, image }, idx) => (
         <Link key={idx} href="/" locale={lang}>
           <LanguageButton

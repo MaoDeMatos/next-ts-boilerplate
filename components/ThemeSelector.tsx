@@ -51,7 +51,7 @@ export function ThemeSelector() {
   );
 
   return (
-    <ResponsiveFixedContainer tw="left-10 bottom-12">
+    <ResponsiveFixedContainer tw="left-8 bottom-8">
       <ThemeButton
         type="button"
         title={t("themes.activate.default")}
