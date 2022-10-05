@@ -1,5 +1,6 @@
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import tw, { styled } from "twin.macro";
 
 import frFlag from "@/assets/Flag_of_France.svg";
@@ -19,22 +20,28 @@ const languagesList = [
   { lang: "en", image: ukFlag },
   { lang: "fr", image: frFlag },
 ] as const;
+export type Language = typeof languagesList[number]["lang"];
 
 export const LanguageSelector = () => {
   const { t, i18n } = useTranslation();
+  const { pathname, asPath, query, push } = useRouter();
+
+  const clickHandler = (lang: Language) => {
+    push({ pathname, query }, asPath, { locale: lang });
+  };
 
   return (
     <ResponsiveFixedContainer tw="right-8 bottom-8">
       {languagesList.map(({ lang, image }, idx) => (
-        <Link key={idx} href="/" locale={lang}>
-          <LanguageButton
-            type="button"
-            title={t(`language.${lang}.switch`)}
-            className={i18n.language === lang ? "active" : ""}
-          >
-            <CustomImage src={image} alt={t(`language.${lang}.flagAlt`)} />
-          </LanguageButton>
-        </Link>
+        <LanguageButton
+          key={idx}
+          type="button"
+          title={t(`language.${lang}.switch`)}
+          className={i18n.language === lang ? "active" : ""}
+          onClick={() => clickHandler(lang)}
+        >
+          <CustomImage src={image} alt={t(`language.${lang}.flagAlt`)} />
+        </LanguageButton>
       ))}
     </ResponsiveFixedContainer>
   );
