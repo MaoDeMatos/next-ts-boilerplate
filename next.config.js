@@ -6,6 +6,11 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   i18n,
+  webpack: (config) => {
+    // Needed to use `tw` prop in sub directories
+    config.resolve.preferRelative = true;
+    return config;
+  },
 };
 
 module.exports = nextConfig;
