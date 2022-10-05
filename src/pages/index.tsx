@@ -3,7 +3,7 @@ import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import "twin.macro";
 
-import { Page, PageTitle } from "@/components/Page";
+import { Page, PageTitle } from "@/components/Layout/Page";
 
 import { makeStaticTranslationProps } from "../helpers";
 

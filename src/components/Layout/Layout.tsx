@@ -2,9 +2,9 @@ import "twin.macro";
 
 import { HasChildren } from "@/types/GeneralTypes";
 
+import VercelLogo from "../svgs/VercelLogo";
 import { LanguageSelector } from "./LanguageSelector";
 import { ThemeSelector } from "./ThemeSelector";
-import VercelLogo from "./VercelLogo";
 
 function Footer() {
   return (

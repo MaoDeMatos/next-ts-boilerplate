@@ -2,9 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/assets/*": ["assets/*"],
-      "@/components/*": ["components/*"],
-      "@/helpers/*": ["helpers/*"],
+      "@/*": ["src/*"],
       "@/types/*": ["types/*"]
     },
     "target": "es5",

@@ -5,7 +5,7 @@ import tw, { styled } from "twin.macro";
 import frFlag from "@/assets/Flag_of_France.svg";
 import ukFlag from "@/assets/Flag_of_the_UK.svg";
 
-import { CustomImage } from "./CustomImage";
+import { CustomImage } from "../shared/CustomImage";
 import { ResponsiveFixedContainer } from "./Page";
 
 const LanguageButton = styled("button", {
