@@ -6,7 +6,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 - NodeJS >= 16
 
-> ❗ You **MUST NOT** create a `src` folder, or it will break `stitches.config.ts` import
+> ❗ Due to how Webpack resolves imports, you **CANNOT** use Windows, or it will break `stitches.config.ts` import from `twin.macro` (at least, at the time of writing).
+>
+> ❗ Use WSL 2 ([Windows Subsystem for Linux](https://wikipedia.org/wiki/Windows_Subsystem_for_Linux)) if you need to start the app locally
 
 ## Getting Started
 
