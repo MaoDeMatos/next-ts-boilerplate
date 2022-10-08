@@ -1,7 +1,7 @@
 import { GetStaticProps, NextPage } from "next";
 
 import { RouteLoader } from "@/components/RouteLoader";
-import { makeStaticTranslationProps } from "@/helpers/index";
+import { makeStaticTranslationProps } from "@/helpers";
 
 export const getStaticProps: GetStaticProps = makeStaticTranslationProps([
   "common",

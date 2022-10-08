@@ -4,10 +4,10 @@ import Head from "next/head";
 import Router from "next/router";
 import NProgress from "nprogress";
 import { useEffect } from "react";
+import "twin.macro";
 
 import Layout from "@/components/Layout/Layout";
-
-import globalStyles from "../styles/GlobalStyles";
+import globalStyles from "@/styles/GlobalStyles";
 
 NProgress.configure({ showSpinner: false });
 

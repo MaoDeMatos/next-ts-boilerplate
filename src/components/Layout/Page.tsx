@@ -1,6 +1,6 @@
 import tw from "twin.macro";
 
-export const Page = tw.div`flex flex-col flex-1 justify-center items-center gap-8`;
+export const Page = tw.div`flex flex-col justify-center items-center gap-8 py-12 px-16`;
 
 export const PageTitle = tw.h1`text-6xl font-bold text-center`;
 

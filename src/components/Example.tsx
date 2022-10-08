@@ -1,7 +1,5 @@
+import { PageTitle } from "./Layout/Page";
+
 export default function Example({ text }: { text: string }) {
-  return (
-    <div className="page">
-      <h1>Example page {`"${text}"`}</h1>
-    </div>
-  );
+  return <PageTitle>Example page {`"${text}"`}</PageTitle>;
 }
