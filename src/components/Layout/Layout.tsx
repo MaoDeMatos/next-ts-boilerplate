@@ -23,7 +23,7 @@ function NavBar() {
   return (
     <nav tw="fixed inset-x-0 bottom-0 w-full flex py-8 justify-center items-center gap-4 px-8">
       {pages.map((url) => (
-        <CustomLink key={url} href={url} tw="bg-accent">
+        <CustomLink key={url} href={url}>
           <button type="button" tw="underline text-accent">
             {url}
           </button>

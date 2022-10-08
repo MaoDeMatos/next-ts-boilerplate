@@ -59,7 +59,10 @@ export function useCurrentTheme() {
   }));
 
   const [theme, setTheme] = useState<State>(defaultThemeStoreValues);
-  useEffect(() => setTheme({ currentTheme, isDarkMode }), [currentTheme]);
+  useEffect(
+    () => setTheme({ currentTheme, isDarkMode }),
+    [currentTheme, isDarkMode]
+  );
 
   return theme;
 }

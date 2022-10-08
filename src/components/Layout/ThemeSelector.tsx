@@ -34,20 +34,20 @@ export function ThemeSelector() {
 
   const { t } = useTranslation("common");
 
-  const setSystemTheme = (e?: MediaQueryListEvent) => {
-    if (currentTheme === "system") changeTheme("system");
-  };
-
   // Change theme when system theme updates
   useEffect(
     () => {
+      const setSystemTheme = (e?: MediaQueryListEvent) => {
+        if (currentTheme === "system") changeTheme("system");
+      };
+
       const mq = window.matchMedia("(prefers-color-scheme: dark)");
 
       mq.addEventListener("change", setSystemTheme);
       return () => mq.removeEventListener("change", setSystemTheme);
     },
-    // You need this dependency or the listener will never update current theme value
-    [currentTheme]
+    // You need this dependencies or the listener will never update current theme value
+    [currentTheme, changeTheme]
   );
 
   return (
