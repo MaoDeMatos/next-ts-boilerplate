@@ -30,6 +30,7 @@ const localTheme = create<State & Actions>()(
   persist(
     (set) => ({
       ...defaultThemeStoreValues,
+
       changeTheme(newTheme) {
         const isSystem = newTheme === "system";
         const isDarkMode = isSystem

@@ -1,5 +1,4 @@
 import { useTranslation } from "next-i18next";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import tw, { styled } from "twin.macro";
 

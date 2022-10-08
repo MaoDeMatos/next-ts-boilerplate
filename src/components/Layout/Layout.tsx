@@ -1,3 +1,5 @@
+import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 import "twin.macro";
 
 import { HasChildren } from "@/types/GeneralTypes";
@@ -5,6 +7,25 @@ import { HasChildren } from "@/types/GeneralTypes";
 import VercelLogo from "../svgs/VercelLogo";
 import { LanguageSelector } from "./LanguageSelector";
 import { ThemeSelector } from "./ThemeSelector";
+
+/**
+ * Temporary navbar, to test page transitions
+ */
+function NavBar() {
+  const pages = ["/", "/test", "/test/a", "/test/b", "/test/c"];
+
+  return (
+    <nav tw="flex py-8 justify-center items-center gap-4 px-8 border-b border-base-300">
+      {pages.map((url) => (
+        <Link key={url} href={url} tw="bg-accent">
+          <button type="button" tw="underline text-accent">
+            {url}
+          </button>
+        </Link>
+      ))}
+    </nav>
+  );
+}
 
 function Footer() {
   return (
@@ -26,7 +47,15 @@ export default function Layout({ children }: HasChildren) {
       <ThemeSelector />
       <LanguageSelector />
 
-      <main tw="py-8 px-16 flex-1">{children}</main>
+      <NavBar />
+
+      <AnimatePresence
+        // initial={false}
+        mode="wait"
+      >
+        <motion.main tw="py-8 px-16 flex-1">{children}</motion.main>
+        {/* <main tw="py-8 px-16 flex-1">{children}</main> */}
+      </AnimatePresence>
 
       <Footer />
     </div>

@@ -1,6 +1,5 @@
 import type { GetStaticProps, NextPage } from "next";
 import { useTranslation } from "next-i18next";
-import Link from "next/link";
 import "twin.macro";
 
 import { Page, PageTitle } from "@/components/Layout/Page";
@@ -26,12 +25,6 @@ const Home: NextPage = () => {
           <code>pages/index.tsx</code>
         </pre>
       </div>
-
-      <Link href="/test" tw="bg-accent">
-        <button type="button" tw="underline text-accent">
-          Test
-        </button>
-      </Link>
     </Page>
   );
 };
