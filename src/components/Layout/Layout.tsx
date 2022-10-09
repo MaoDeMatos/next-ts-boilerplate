@@ -18,7 +18,7 @@ import { ThemeSelector } from "./ThemeSelector";
  * Temporary navbar, to test page transitions
  */
 function NavBar() {
-  const pages = ["/", "/loading", "/a", "/b", "/c"];
+  const pages = ["/", "/loading", "/a", "/b", "/c", "/404"];
 
   return (
     <nav tw="fixed inset-x-0 bottom-0 w-full flex py-8 justify-center items-center gap-4 px-8">

@@ -3,6 +3,7 @@ import { useTranslation } from "next-i18next";
 import "twin.macro";
 
 import { Page, PageTitle } from "@/components/Layout/Page";
+import { Button } from "@/components/shared/Buttons";
 
 import { makeStaticTranslationProps } from "../helpers";
 
@@ -15,7 +16,7 @@ const Home: NextPage = () => {
 
   return (
     <Page>
-      <PageTitle>👋 {`${t("global.welcome")} `}</PageTitle>
+      <PageTitle>{t("global.welcome")}</PageTitle>
 
       <div tw="transition-colors mockup-code">
         <pre data-prefix="$">
@@ -25,6 +26,10 @@ const Home: NextPage = () => {
           <code>pages/index.tsx</code>
         </pre>
       </div>
+
+      <Button tw="btn-primary">Primary</Button>
+      <Button tw="btn-secondary">Secondary</Button>
+      <Button type="gradient">Gradient</Button>
     </Page>
   );
 };
