@@ -20,7 +20,7 @@ module.exports = {
           // "Trebuchet MS",
           ...defaultTheme.fontFamily.sans,
         ],
-        lexend: ["Lexend", ...defaultTheme.fontFamily.sans],
+        lexend: ["Lexend"],
       },
       colors: {
         slate: colors.slate,

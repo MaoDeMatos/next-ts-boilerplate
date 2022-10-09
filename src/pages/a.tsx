@@ -1,7 +1,7 @@
 import { GetStaticProps, NextPage } from "next";
 
 import Example from "@/components/Example";
-import { Page } from "@/components/Layout/Page";
+import { PageContent } from "@/components/Layout/Page";
 import { makeStaticTranslationProps } from "@/helpers";
 
 export const getStaticProps: GetStaticProps = makeStaticTranslationProps([
@@ -10,11 +10,11 @@ export const getStaticProps: GetStaticProps = makeStaticTranslationProps([
 
 const A: NextPage = () => {
   return (
-    <Page>
+    <PageContent background={"radialGradients"}>
       <Example text="A" />
       <div style={{ height: "150vh" }}></div>
       <Example text="A" />
-    </Page>
+    </PageContent>
   );
 };
 

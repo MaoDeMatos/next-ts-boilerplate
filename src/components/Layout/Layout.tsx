@@ -18,13 +18,13 @@ import { ThemeSelector } from "./ThemeSelector";
  * Temporary navbar, to test page transitions
  */
 function NavBar() {
-  const pages = ["/", "/loading", "/a", "/b", "/c", "/404"];
+  const pages = ["/", "/loading", "/a", "/b", "/404"];
 
   return (
-    <nav tw="fixed inset-x-0 bottom-0 w-full flex py-8 justify-center items-center gap-4 px-8 font-lexend">
+    <nav tw="fixed z-[1] inset-x-0 bottom-0 w-full flex py-8 justify-center items-center gap-4 px-8 font-lexend text-primary">
       {pages.map((url) => (
         <CustomLink key={url} href={url}>
-          <button type="button" tw="underline text-accent">
+          <button type="button" tw="underline">
             {url}
           </button>
         </CustomLink>
@@ -33,7 +33,7 @@ function NavBar() {
   );
 }
 
-const AnimatedPage = styled(motion.main, tw`h-screen overflow-y-auto`);
+const AnimatedPage = styled(motion.div, tw`h-screen relative overflow-y-auto`);
 
 export default function Layout({ children }: HasChildren) {
   const { pathname } = useRouter();
@@ -67,7 +67,6 @@ export default function Layout({ children }: HasChildren) {
     <>
       <AnimatePresence mode="wait">
         <AnimatedPage
-          tw="h-screen overflow-y-auto"
           variants={
             // shouldReduceMotion ? {} :
             pageVariants

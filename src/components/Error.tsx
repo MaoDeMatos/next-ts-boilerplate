@@ -1,6 +1,6 @@
 import "twin.macro";
 
-import { Page, PageTitle } from "./Layout/Page";
+import { PageContent, PageSubTitle, PageTitle } from "./Layout/Page";
 import { Button } from "./shared/Buttons";
 import { CustomLink } from "./shared/CustomLink";
 
@@ -18,18 +18,24 @@ export const ErrorPage = ({
   buttonText,
 }: ErrorPageProps) => {
   return (
-    <Page tw="h-full">
-      <div
-      // tw="text-transparent bg-clip-text bg-gradient-to-br from-primary to-secondary"
-      >
-        {statusCode && <PageTitle tw="text-9xl">{statusCode}</PageTitle>}
-        {title && <h2 tw="text-2xl font-bold">{title}</h2>}
-        {subTitle && <p tw="text-xl">{subTitle}</p>}
-      </div>
+    <PageContent
+      background={"radialGradients"}
+      tw="pt-20 items-center gap-12 sm:(flex-row pt-12 pl-32)"
+    >
+      {statusCode && (
+        <PageTitle tw="text-7xl sm:(text-9xl)">{statusCode}</PageTitle>
+      )}
 
-      <CustomLink href={"/"}>
-        <Button type={"gradient"}>{buttonText}</Button>
-      </CustomLink>
-    </Page>
+      <div tw="hidden sm:(block) rounded-full h-64 w-1 bg-secondary" />
+
+      <div tw="flex flex-col items-center gap-8 sm:(items-start)">
+        {title && <PageSubTitle>{title}</PageSubTitle>}
+        {subTitle && <p>{subTitle}</p>}
+
+        <CustomLink href={"/"}>
+          <Button type={"gradient"}>{buttonText}</Button>
+        </CustomLink>
+      </div>
+    </PageContent>
   );
 };
