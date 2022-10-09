@@ -1,4 +1,4 @@
-# NextJS + Typescript portfolio
+# Mao's website !
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
@@ -6,7 +6,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 - NodeJS >= 16
 
-> ❗ You **MUST NOT** create a `src` folder, or it will break `stitches.config.ts` import
+> ❗ Due to how Webpack resolves imports, you **CANNOT** use Windows, or it will break `stitches.config.ts` import from `twin.macro` (at least, at the time of writing).
+>
+> ❗ Use WSL 2 ([Windows Subsystem for Linux](https://wikipedia.org/wiki/Windows_Subsystem_for_Linux)) if you need to start the app locally
 
 ## Getting Started
 
@@ -17,15 +19,20 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
+### `yarn build`
 
-To learn more about Next.js, take a look at the following resources:
+Build the app for production. It will erase any development build currently in the `.next` directory.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### `yarn start`
 
-## Deploy on Vercel
+Serve a production build at [http://localhost:3000](http://localhost:3000).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+You must have a production build in your `.next` directory (built by `yarn build`).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Tech
+
+It mainly uses :
+
+- NextJS
+- Typescript
+- stitches, twin.macro & daisyui for the styles

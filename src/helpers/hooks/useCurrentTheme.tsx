@@ -3,14 +3,8 @@ import create from "zustand";
 import { persist } from "zustand/middleware";
 
 const themesData = {
-  lightThemes: [
-    "light",
-    "autumn",
-    // "aqua",
-    // "cyberpunk",
-    "pastel",
-  ] as const,
-  darkThemes: ["dracula", "forest"] as const,
+  lightThemes: ["light"] as const,
+  darkThemes: ["dracula"] as const,
 };
 
 export const themes = [
@@ -30,6 +24,7 @@ const localTheme = create<State & Actions>()(
   persist(
     (set) => ({
       ...defaultThemeStoreValues,
+
       changeTheme(newTheme) {
         const isSystem = newTheme === "system";
         const isDarkMode = isSystem
@@ -58,7 +53,10 @@ export function useCurrentTheme() {
   }));
 
   const [theme, setTheme] = useState<State>(defaultThemeStoreValues);
-  useEffect(() => setTheme({ currentTheme, isDarkMode }), [currentTheme]);
+  useEffect(
+    () => setTheme({ currentTheme, isDarkMode }),
+    [currentTheme, isDarkMode]
+  );
 
   return theme;
 }

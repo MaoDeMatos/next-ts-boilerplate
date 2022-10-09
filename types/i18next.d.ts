@@ -4,14 +4,6 @@ import "react-i18next";
 // import all namespaces (for the default language, only)
 import common from "../public/locales/en/common.json";
 
-// declare module "react-i18next" {
-//   interface Resources {
-//     // resources: {
-//     common: typeof common;
-//     // };
-//   }
-// }
-
 declare module "react-i18next" {
   interface CustomTypeOptions {
     // custom namespace

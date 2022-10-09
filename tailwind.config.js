@@ -15,11 +15,12 @@ module.exports = {
       },
       fontFamily: {
         sans: [
-          // "Inter var",
+          "Josefin Sans",
           "Helvetica",
-          "Trebuchet MS",
+          // "Trebuchet MS",
           ...defaultTheme.fontFamily.sans,
         ],
+        lexend: ["Lexend"],
       },
       colors: {
         slate: colors.slate,
@@ -27,15 +28,6 @@ module.exports = {
     },
   },
   daisyui: {
-    themes: [
-      "light",
-      "dracula",
-      "forest",
-      "autumn",
-      "forest",
-      // "aqua",
-      // "cyberpunk",
-      "pastel",
-    ],
+    themes: ["light", "dracula"],
   },
 };

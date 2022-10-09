@@ -16,14 +16,9 @@ const ThemeButton = styled("button", {
   ...tw`[&.active]:(ring-2 ring-secondary)`,
   variants: {
     theme: {
-      system: tw`bg-transparent`,
+      system: tw`bg-base-100`,
       light: tw`bg-white`,
       dracula: tw`bg-indigo-400`,
-      autumn: tw`bg-red-600`,
-      forest: tw`bg-emerald-600`,
-      aqua: tw`bg-blue-400`,
-      cyberpunk: tw`bg-yellow-300`,
-      pastel: tw`bg-rose-200`,
     },
   },
 });
@@ -34,24 +29,24 @@ export function ThemeSelector() {
 
   const { t } = useTranslation("common");
 
-  const setSystemTheme = (e?: MediaQueryListEvent) => {
-    if (currentTheme === "system") changeTheme("system");
-  };
-
   // Change theme when system theme updates
   useEffect(
     () => {
+      const setSystemTheme = (e?: MediaQueryListEvent) => {
+        if (currentTheme === "system") changeTheme("system");
+      };
+
       const mq = window.matchMedia("(prefers-color-scheme: dark)");
 
       mq.addEventListener("change", setSystemTheme);
       return () => mq.removeEventListener("change", setSystemTheme);
     },
-    // You need this dependency or the listener will never update current theme value
-    [currentTheme]
+    // You need this dependencies or the listener will never update current theme value
+    [currentTheme, changeTheme]
   );
 
   return (
-    <ResponsiveFixedContainer tw="left-10 bottom-12">
+    <ResponsiveFixedContainer tw="left-8 bottom-8">
       <ThemeButton
         type="button"
         title={t("themes.activate.default")}
