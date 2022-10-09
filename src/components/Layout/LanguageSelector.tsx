@@ -12,7 +12,6 @@ const LanguageButton = styled("button", {
   ...tw`relative h-6 w-6 text-sm transition-all`,
   ...tw`rounded-full overflow-hidden border border-base-content`,
   ...tw`ring-0 ring-transparent ring-offset-4 ring-offset-base-100`,
-  ...tw`[&.active]:(ring-2 ring-secondary)`,
 });
 
 const languagesList = [
@@ -31,17 +30,18 @@ export const LanguageSelector = () => {
 
   return (
     <ResponsiveFixedContainer tw="right-8 bottom-8">
-      {languagesList.map(({ lang, image }, idx) => (
-        <LanguageButton
-          key={idx}
-          type="button"
-          title={t(`language.${lang}.switch`)}
-          className={i18n.language === lang ? "active" : ""}
-          onClick={() => clickHandler(lang)}
-        >
-          <CustomImage src={image} alt={t(`language.${lang}.flagAlt`)} />
-        </LanguageButton>
-      ))}
+      {languagesList.map(({ lang, image }, idx) => {
+        return i18n.language !== lang ? (
+          <LanguageButton
+            key={idx}
+            type="button"
+            title={t(`language.${lang}.switch`)}
+            onClick={() => clickHandler(lang)}
+          >
+            <CustomImage src={image} alt={t(`language.${lang}.flagAlt`)} />
+          </LanguageButton>
+        ) : null;
+      })}
     </ResponsiveFixedContainer>
   );
 };
