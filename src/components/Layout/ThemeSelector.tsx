@@ -16,7 +16,7 @@ const ThemeButton = styled("button", {
   ...tw`[&.active]:(ring-2 ring-secondary)`,
   variants: {
     theme: {
-      system: tw`bg-transparent`,
+      system: tw`bg-base-100`,
       light: tw`bg-white`,
       dracula: tw`bg-indigo-400`,
       autumn: tw`bg-red-600`,

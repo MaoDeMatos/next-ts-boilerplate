@@ -29,7 +29,6 @@ function App({ Component, pageProps }: AppProps) {
       <Head>
         <title>Mao De Matos</title>
         <meta name="description" content="Mao De Matos. Web developer." />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Layout>
