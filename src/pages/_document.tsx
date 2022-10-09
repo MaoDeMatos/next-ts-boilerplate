@@ -7,10 +7,18 @@ export default function Document() {
     <Html>
       <Head>
         <link rel="icon" href="/favicon.ico" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&family=Lexend:wght@100..900&display=swap"
+          rel="stylesheet"
+        />
         <style
           id="stitches"
           dangerouslySetInnerHTML={{ __html: getCssText() }}
         />
+
         {/* NProgress styles */}
         <link
           rel="stylesheet"
@@ -19,6 +27,12 @@ export default function Document() {
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
+
+        {/*
+         * Initial theme selection, to avoid FOUC
+         * You must use `dangerouslySetInnerHTML` to
+         * send the script inline with the initial html
+         */}
         <script
           type="text/javascript"
           dangerouslySetInnerHTML={{
