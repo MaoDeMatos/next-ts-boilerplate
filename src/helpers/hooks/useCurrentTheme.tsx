@@ -3,14 +3,8 @@ import create from "zustand";
 import { persist } from "zustand/middleware";
 
 const themesData = {
-  lightThemes: [
-    "light",
-    "autumn",
-    // "aqua",
-    // "cyberpunk",
-    "pastel",
-  ] as const,
-  darkThemes: ["dracula", "forest"] as const,
+  lightThemes: ["light"] as const,
+  darkThemes: ["dracula"] as const,
 };
 
 export const themes = [

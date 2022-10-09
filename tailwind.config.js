@@ -28,15 +28,6 @@ module.exports = {
     },
   },
   daisyui: {
-    themes: [
-      "light",
-      "dracula",
-      "forest",
-      "autumn",
-      "forest",
-      // "aqua",
-      // "cyberpunk",
-      "pastel",
-    ],
+    themes: ["light", "dracula"],
   },
 };

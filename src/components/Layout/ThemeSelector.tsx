@@ -19,11 +19,6 @@ const ThemeButton = styled("button", {
       system: tw`bg-base-100`,
       light: tw`bg-white`,
       dracula: tw`bg-indigo-400`,
-      autumn: tw`bg-red-600`,
-      forest: tw`bg-emerald-600`,
-      aqua: tw`bg-blue-400`,
-      cyberpunk: tw`bg-yellow-300`,
-      pastel: tw`bg-rose-200`,
     },
   },
 });
