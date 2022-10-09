@@ -1,6 +1,20 @@
 {
   "global": {
+    "goToHomepage": "Go back to the homepage",
     "welcome": "Welcome to my website !"
+  },
+  "error": {
+    "default": {
+      "title": "An undetermined error occured !"
+    },
+    "404": {
+      "title": "It seems you went a bit too far...",
+      "subtitle": "The page you are looking for do not exist"
+    },
+    "500": {
+      "title": "An error occured on my side !",
+      "subtitle": "The page you are looking for is not available"
+    }
   },
   "language": {
     "current": "EN",
